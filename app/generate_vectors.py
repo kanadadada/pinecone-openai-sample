@@ -26,7 +26,7 @@ def main():
     api_key=os.getenv("PINECONE_API_KEY"),
     environment=os.getenv("PINECONE_ENVIRONMENT"),
   )
-  index_name = "sample-app"
+  index_name = os.getenv("PINECONE_INDEX_NAME")
   index = pinecone.Index(index_name)
 
   # Create a TREC dataset to connect OpenAI to Pinecone
