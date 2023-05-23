@@ -1,0 +1,7 @@
+argparse
+datasets
+openai
+pinecone-client
+python-dotenv
+tqdm
+uuid
