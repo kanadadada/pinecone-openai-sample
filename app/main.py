@@ -48,8 +48,8 @@ def main():
   
   # Append the user's message to the conversation
   prompt = f'''
-  あなたはAI対話アシスタントです。対話相手を思いやる気持ちを持って、対話を続けてください。
-  なお、今までの対話の文脈を踏まえて対話をしてください。以下が対話の文脈情報です。
+  You are an AI dialogue assistant. Please be considerate of your dialogue partner and continue the dialogue.
+  Please keep in mind the context of the dialogue you have just had. The following is the context information of the dialogue.
   {most_similar_conversation}
   '''
   
