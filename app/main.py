@@ -45,11 +45,16 @@ def main():
   else:
     most_similar_conversation = ""
     print("No similar conversation found in Pinecone.")
-    
+  
   # Append the user's message to the conversation
+  prompt = f'''
+  あなたはAI対話アシスタントです。対話相手を思いやる気持ちを持って、対話を続けてください。
+  なお、今までの対話の文脈を踏まえて対話をしてください。以下が対話の文脈情報です。
+  {most_similar_conversation}
+  '''
+  
   conversation = [
-    {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": most_similar_conversation},
+    {"role": "system", "content": prompt},
     {"role": "user", "content": user_message},
   ]
   
